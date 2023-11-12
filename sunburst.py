@@ -14,6 +14,11 @@ import os
 # import pandas as pd
 # import os
 
+# Sunburst
+# https://datos.gob.es/es/catalogo/ea0010587-ocupados-por-situacion-profesional-sexo-y-sector-economico-por-comunidad-autonoma-epa-identificador-api-4018
+# 4018.csv
+# Tabla de INEbase Ocupados por situación profesional, sexo y sector económico, por comunidad autónoma. Trimestral. Comunidades y Ciudades Autónomas. Encuesta de Población Activa (EPA)
+
 # Ruta al archivo CSV
 archivo_csv = os.path.join('datasets', '4018.csv')
 

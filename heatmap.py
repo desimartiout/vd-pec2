@@ -8,14 +8,15 @@
 
 # reducido el dataset a 399000 registros por la limitación de Github a no soportar ficheros de más de 100MB
 
-import numpy as np
+# import numpy as np
+import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-import pandas as pd
+
 import plotly.express as px
 import plotly.graph_objects as go
-import os
+
 
 # Crear datos de ejemplo
 # data = np.random.rand(10, 10)

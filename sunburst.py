@@ -6,23 +6,43 @@
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
+import os
 
 # Leer los datos de la aerolínea en un DataFrame de pandas
-url = 'https://bit.ly/3AVBLcJ'
-data = pd.read_csv(url, encoding="ISO-8859-1", dtype={'Month': str, 'DestStateName': str,'Div1Airport': str, 'Div1TailNum': str, 'Div2Airport': str, 'Div2TailNum': str})
+# url = './../4018.csv'
+# data = pd.read_csv(url)
+# import pandas as pd
+# import os
 
-data.head()
+# Ruta al archivo CSV
+archivo_csv = os.path.join('datasets', '4018.csv')
 
-# Elegimos solo 500 ejemplos de datos
-data = data.sample(n=500, random_state=42)
-data.shape
+# Cargar datos desde el archivo CSV
+df = pd.read_csv(archivo_csv, sep=';')
 
-# Eliminamos los valores vacíos
-data = data.dropna(subset=['Month'])
-data = data.dropna(subset=['DestStateName'])
+# Cambiamos los valores .. por NA
+df['Total'] = df['Total'].replace('..', pd.NA)
 
-# Crear el gráfico Sunburst
-fig = px.sunburst(data, path=['Month', 'DestStateName'], values='Flights')
+# Eliminar filas con valores NaN en la columna 'Total'
+df = df.dropna(subset=['Total'])
+
+# Convertir la columna 'Total' a tipo numérico
+df['Total'] = pd.to_numeric(df['Total'], errors='coerce')
+
+# Eliminamos los totales de todas las columnas a visualizar
+df_filtrado = df[(df['Comunidades y Ciudades Autónomas'] != 'Total') & (df['Sector económico'] != 'Total') & (df['Situación profesional'] != 'Total')]
+# df_filtrado = df[df['Sector económico'] != 'Total']
+# df_filtrado = df[df['Situación profesional'] != 'Total']
+
+# Crear el gráfico sunburst
+fig = px.sunburst(
+    df_filtrado,
+    # path=['Comunidades y Ciudades Autónomas', 'Situación profesional', 'Sector económico'],
+    path=['Comunidades y Ciudades Autónomas', 'Sector económico', 'Situación profesional'],
+    # path=['Sector económico', 'Situación profesional'],
+    values='Total',
+    title='Sunburst por Comunidades y Ciudades Autónomas, Sector económico y Situación profesional (2008T4)'
+)
 
 # Mostrar el gráfico
 fig.show()

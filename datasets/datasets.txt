@@ -1,4 +1,26 @@
-Sunburst
-https://datos.gob.es/es/catalogo/ea0010587-ocupados-por-situacion-profesional-sexo-y-sector-economico-por-comunidad-autonoma-epa-identificador-api-4018
-4018.csv
-Tabla de INEbase Ocupados por situación profesional, sexo y sector económico, por comunidad autónoma. Trimestral. Comunidades y Ciudades Autónomas. Encuesta de Población Activa (EPA)
+Repositorio de datos elegido: The Home of the U.S. Government's Open Data
+Url: https://data.gov/
+Dataset elegido: Crime Data from 2020 to Present - City of Los Angeles
+Descripción: This dataset reflects incidents of crime in the City of Los Angeles dating back to 2020. This data is transcribed from original crime reports that are typed on paper and therefore there.
+Url info dataset: https://catalog.data.gov/dataset/crime-data-from-2020-to-present
+Url dataset: https://data.lacity.org/api/views/2nrs-mtv8/rows.csv?accessType=DOWNLOAD
+Publicador: data.lacity.org
+Licencia: http://creativecommons.org/publicdomain/zero/1.0/legalcode
+
+Repositorio de datos elegido: Portal datos abiertos del Gobierno de España
+Url: https://datos.gob.es/es
+Dataset elegido: Ocupados por situación profesional, sexo y sector económico, por comunidad autónoma. EPA (Identificador API: 4018)
+Descripción: Tabla de INEbase Ocupados por situación profesional, sexo y sector económico, por comunidad autónoma. Trimestral. Comunidades y Ciudades Autónomas. Encuesta de Población Activa (EPA)
+Url info dataset:
+Url dataset: https://www.ine.es/jaxiT3/files/t/csv_bdsc/4018.csv
+Publicador: Instituto Nacional de Estadística (MINISTERIO DE ASUNTOS ECONÓMICOS Y TRANSFORMACIÓN DIGITAL)
+Licencia: https://www.ine.es/aviso_legal
+
+Repositorio de datos elegido: Portal de Datos Abiertos de la Generalitat Valenciana
+Url: https://portaldadesobertes.gva.es/es
+Dataset elegido: COVID-19 Serie de casos con PDIA positiva en la Comunitat Valenciana, según fecha en la que el laboratorio notifica el diagnóstico
+Descripción: Información del número de casos de COVID-19 en la Comunidad Valenciana, tanto información agrupada por provincia como detallada a nivel de departamentos de salud.
+Url info dataset: https://dadesobertes.gva.es/es/dataset/covid-19-series-casos-pdia-positiva/resource/cb50e7d2-0c0e-46b8-a359-a0fa35998577
+Url dataset: https://dadesobertes.gva.es/dataset/ce195af2-39ec-4f44-bb77-b14235519b0d/resource/cb50e7d2-0c0e-46b8-a359-a0fa35998577/download/covid-19-serie-de-casos-con-pdia-positiva-en-la-comunitat-valenciana.csv
+Publicador: Generalitat Valenciana
+Licencia: http://www.opendefinition.org/licenses/cc-by
